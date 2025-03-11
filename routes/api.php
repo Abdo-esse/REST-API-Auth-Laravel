@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\api\HomeController;
 
 /*
@@ -25,3 +26,4 @@ Route::get('/',function(){
     return 'API';
 });
 
+Route::apiResource('posts', PostController::class);

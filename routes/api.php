@@ -20,3 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/home',[HomeController::class,'index']);
+
+Route::get('/',function(){
+    return 'API';
+});
+

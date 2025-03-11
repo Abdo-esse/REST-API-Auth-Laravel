@@ -20,7 +20,7 @@ use Illuminate\Http\Request;
      *         response="200",
      *         description="OK",
      *         @OA\MediaType(
-     *             mediatype="application/json",
+     *             mediaType="application/json",
      *)
      * ),
      *     
@@ -28,5 +28,11 @@ use Illuminate\Http\Request;
      */
 class HomeController extends Controller
 {
-    //
+    public function index(Request $request)
+    {
+        return response()->json([
+            'name'=>$request->input('name'),
+            'message'=>'hello world',
+        ]);
+    }
 }
